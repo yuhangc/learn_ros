@@ -1,0 +1,19 @@
+<launch>
+  <arg name="x" default="5.0" />
+  <arg name="y" default="5.0" />
+  <arg name="theta" default="0.0" />
+
+  <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch"/>
+
+  <node pkg="tutorial0" type="robot_controlelr.py" name="robot_controller">
+	<!-- parameters for the controller -->
+  </node>
+
+  <node pkg="tutorial0" type="robot_supervisor.py" name="robot_supervisor" output="screen">
+  	<param name="pose_goal_x" value="$(arg x)/"/>
+	<param name="pose_goal_y" value="$(arg y)/"/>
+	<param name="pose_goal_theta" value="$(arg theta)/"/>
+    <!-- any other parameters -->
+  </node>
+  
+</launch>

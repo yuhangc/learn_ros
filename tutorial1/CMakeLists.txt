@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(tutorial1)
 
 ## Add support for C++11, supported in ROS Kinetic and newer
-# add_definitions(-std=c++11)
+add_definitions(-std=c++11)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -38,28 +38,39 @@ catkin_package(
 ## Your package locations should be listed before other locations
 include_directories(
     include/tutorial1
-	external
     ${catkin_INCLUDE_DIRS}
 )
 
 # set source, header for the serial manager node
 set(SERIAL_MANAGER_SOURCES
-	src/serial_manager.cpp
+	# your sources
 )
 
 set(SERIAL_MANAGER_HEADERS
-	include/tutorial1/serial_manager.h
+	# your headers
+)
+
+# set source, header for the haptics node
+set(HAPTIC_NODE_SOURCES
+	# your sources
+)
+
+set(HAPTIC_NODE_HEADERS
+	# your headers
 )
 
 ## Declare a C++ library
 add_library(arduino_serial
-	external/CArduinoDevice.h
-	external/CArduinoDevice.cpp
+	# source files
 )
 
 ## Declare c++ executables
 # add executable
-add_executable(serial_manager ${SERIAL_MANAGER_SOURCES} ${SERIAL_MANAGER_HEADERS})
+# add_executable(serial_manager ${SERIAL_MANAGER_SOURCES} ${SERIAL_MANAGER_HEADERS})
 # link necessary libraries
-target_link_libraries(serial_manager arduino_serial ${catkin_LIBRARIES})
+# target_link_libraries(serial_manager arduino_serial ${catkin_LIBRARIES})
 
+# add executable
+# add_executable(haptic_node ${HAPTIC_NODE_SOURCES} ${HAPTIC_NODE_HEADERS})
+# link necessary libraries
+# target_link_libraries(haptic_node ${catkin_LIBRARIES} usb-1.0 hidapi-libusb mccusb)

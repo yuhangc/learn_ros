@@ -1,3 +1,6 @@
+#ifndef SERIAL_MANAGER_H
+#define SERIAL_MANAGER_H
+
 #include "ros/ros.h"
 #include "std_msgs/String.h"
 #include "std_msgs/Float32MultiArray.h"
@@ -26,3 +29,5 @@ private:
     // arduino device
     CArduinoDevice* arduino;
 };
+
+#endif

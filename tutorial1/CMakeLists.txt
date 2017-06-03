@@ -60,9 +60,9 @@ set(HAPTIC_NODE_HEADERS
 )
 
 ## Declare a C++ library
-add_library(arduino_serial
-	# source files
-)
+# add_library(arduino_serial
+#     source files
+# )
 
 ## Declare c++ executables
 # add executable

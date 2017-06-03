@@ -1,19 +1,18 @@
-#include <iostream>
 #include <QApplication>
 
-#include "exp_main_window.h"
+#include "control_panel.h"
 
 // ============================================================================
 int main(int argc, char** argv)
 {
     // initialize node
-    ros::init(argc, argv, "experiment_control");
+    ros::init(argc, argv, "control_panel");
 
     // create a QApplication
     QApplication a(argc, argv);
 
     // create a main window object
-    ExpMainWindow main_window;
+    ControlPanel main_window;
     main_window.Init();
 
     // show the main window

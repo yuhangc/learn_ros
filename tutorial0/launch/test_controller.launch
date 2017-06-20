@@ -1,4 +1,6 @@
 <launch>
   <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch"/>
+  <node pkg="tutorial0" type = "robot_controller.py" name = "robot_controller"/>
+  <node pkg="tutorial0" type = "simple_trajectory_publisher.py" name = "trajectory_publisher" />
   <!-- include your controller and trajectory generator -->
 </launch>

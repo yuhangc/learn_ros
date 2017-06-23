@@ -1,0 +1,13 @@
+<launch>
+  <node pkg="tutorial1" type="haptic_node" name="haptic_node" output="screen">
+	<param name="analog_out_channel0" value="1"/>
+	<param name="repetition_effect0" value="1"/>
+	<param name="amplitude_effect0" value="2.5"/>
+	<param name="period_render_effect0" value="1.5"/>
+	<param name="period_pause_effect0" value="0.5"/>
+	<param name="repetition_effect1" value="3"/>
+	<param name="amplitude_effect1" value="1.5"/>
+	<param name="period_render_effect1" value="0.2"/>
+	<param name="period_pause_effect1" value="0.2"/>
+  </node>
+</launch>

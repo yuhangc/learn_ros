@@ -1,0 +1,10 @@
+<launch>
+  <!-- include the serial_manager and teleop node -->
+  <node pkg="tutorial1" type="velocity_smoother.py" name="velocity_smoother">
+  	<param name="maximum_increment_linear" type="double" value="0.02"/>
+  	<param name="maximum_increment_angular" type="double" value="1.0"/>
+  	<param name="velocity_cap_linear" type="double" value="1.0"/>
+  	<param name="velocity_cap_angular" type="double" value="3.0"/>
+  	<remap from="cmd_vel_smooth" to="cmd_vel_mux/input/teleop"/>
+  </node>
+</launch>
